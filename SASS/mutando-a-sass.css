@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+/* Variables */
+/* Index */
+.container__index {
+  max-width: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 125px 650px 400px 100px;
+      grid-template-rows: 125px 650px 400px 100px;
+      grid-template-areas: "header header header" "presentacion presentacion presentacion" "texto texto texto" "footer footer footer";
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  background-color: white;
+  height: 125px;
+  background-image: -webkit-gradient(linear, right top, left top, from(black), to(white));
+  background-image: linear-gradient(to left, black, white);
+  z-index: 999;
+}
+
+.header .header__logo {
+  height: 100px;
+  width: 120px;
+  border-end-end-radius: 40px;
+}
+
+.header .navbar {
+  font-family: "Bebas Neue", cursive;
+  color: white;
+  font-size: 24px;
+}
+
+#presentacion {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: presentacion;
+  padding-top: 10px;
+  background-color: white;
+}
+
+#texto {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: texto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  background-image: -webkit-gradient(linear, right top, left top, from(black), to(white));
+  background-image: linear-gradient(to left, black, white);
+}
+
+#texto .presentacion__txt {
+  font-size: 25px;
+  font-family: "Bebas Neue", cursive;
+  list-style: none;
+  padding-left: 50px;
+}
+
+#texto .presentacion__txt2 {
+  font-size: 25px;
+  font-family: "Bebas Neue", cursive;
+  margin-left: 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-top: 10px;
+  padding-left: 150px;
+}
+
+#texto .presentacion__txt3 {
+  font-size: 30px;
+  font-family: "Kaushan Script", cursive;
+  padding-top: 70px;
+  color: white;
+  padding-left: 50px;
+}
+
+#texto .presentacion__video {
+  margin-right: 100px;
+  height: 350px;
+  width: 500px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  border: solid black 2px;
+}
+
+/* Redes Sociales Link */
+.social__bar {
+  position: fixed;
+  right: 0;
+  top: 35%;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  z-index: 100;
+}
+
+.social__bar .icon {
+  color: white;
+  text-decoration: none;
+  padding: .7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.social__bar .icon:hover {
+  padding-right: 3rem;
+  border-radius: 1rem 0 0 1rem;
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.42);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.42);
+  color: black;
+}
+
+.social__bar .icon:last-child {
+  border-radius: 0 0 0 1rem;
+}
+
+.social__bar .icon:first-child {
+  border-radius: 1rem 0 0 0;
+}
+
+.icon-facebook {
+  background: #2E406E;
+}
+
+.icon-twitter {
+  background: #339DC5;
+}
+
+.icon-whatsapp {
+  background: green;
+}
+
+.icon-instagram {
+  background: red;
+}
+
+/* Footer */
+.pie {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  height: 140px;
+  font-family: "Bebas Neue", cursive;
+}
+
+.pie__datos {
+  font-size: 18px;
+  font-family: "Bebas Neue", cursive;
+  color: white;
+  list-style: none;
+}
+
+.pie .copy {
+  color: white;
+  margin-left: 50%;
+}
+
+/* Pagina Productos */
+.migajas {
+  padding-top: 25px;
+  padding-left: 10px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+}
+/*# sourceMappingURL=mutando-a-sass.css.map */
