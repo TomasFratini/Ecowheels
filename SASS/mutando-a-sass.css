@@ -5,16 +5,213 @@
   font-size: 100%;
 }
 
-/* Variables */
-/* Index */
+.migajas {
+  padding-top: 25px;
+  padding-left: 10px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+}
+
+.container__productos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100px 1100px 100px;
+      grid-template-rows: 100px 1100px 100px;
+      grid-template-areas: "header" "productos" "footer";
+}
+
+#productos {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: productos;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 10px;
+  background-color: white;
+  padding: 10px;
+  padding-bottom: 50px;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  font-family: "Bebas Neue", cursive;
+  font-weight: bold;
+}
+
+#productos .productos__img {
+  margin: 15px 0;
+  border: solid black 2px;
+}
+
+#productos .productos__txt {
+  margin-left: 100px;
+  font-size: 20px;
+}
+
+.container__servtecnico {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100px 550px 100px;
+      grid-template-rows: 100px 550px 100px;
+      grid-template-areas: "header" "servtecnico" "footer";
+}
+
+#servtecnico {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: servtecnico;
+  font-family: "Bebas Neue", cursive;
+  padding-top: px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: 25px;
+}
+
+#servtecnico .card {
+  border: black solid;
+}
+
+.container__nosotros {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100px 950px 100px;
+      grid-template-rows: 100px 950px 100px;
+      grid-template-areas: "header" "nosotros" "footer";
+}
+
+#nosotros {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nosotros;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 50px;
+  margin-top: 20px;
+  max-width: 900px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 25px;
+}
+
+#nosotros .card-img-top {
+  height: 500px;
+}
+
+.container__contactos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 100px 450px 400px 100px;
+      grid-template-rows: 100px 450px 400px 100px;
+      grid-template-areas: "header header" "formulario mapa" "canales canales" "footer footer";
+}
+
+#contactanos {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: formulario;
+}
+
+#formulario {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: formulario;
+  font-family: "Bebas Neue", cursive;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+.mapa {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: mapa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding-left: 100px;
+  padding-top: 30px;
+}
+
+#canales {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: canales;
+  font-family: "Bebas Neue", cursive;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(black), to(white));
+  background-image: linear-gradient(to top, black, white);
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 100px;
+  color: black;
+}
+
+#canales .canales__titulo {
+  font-size: 40px;
+  padding-bottom: 10px;
+  color: black;
+}
+
+#canales .canales__contacto li {
+  list-style: none;
+}
+
+#canales .canales__contacto li a {
+  list-style: none;
+  font-size: 20px;
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#canales .canales__redes li {
+  list-style: none;
+}
+
+#canales .canales__redes li a {
+  list-style: none;
+  font-size: 25px;
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/* Indexx */
 .container__index {
   max-width: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 125px 650px 400px 100px;
-      grid-template-rows: 125px 650px 400px 100px;
+  -ms-grid-rows: 125px 650px 500px 100px;
+      grid-template-rows: 125px 650px 500px 100px;
       grid-template-areas: "header header header" "presentacion presentacion presentacion" "texto texto texto" "footer footer footer";
 }
 
@@ -62,8 +259,7 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: white;
-  padding-top: 70px;
-  padding-bottom: 20px;
+  padding-top: 100px;
   background-image: -webkit-gradient(linear, right top, left top, from(black), to(white));
   background-image: linear-gradient(to left, black, white);
 }
@@ -196,13 +392,5 @@
 .pie .copy {
   color: white;
   margin-left: 50%;
-}
-
-/* Pagina Productos */
-.migajas {
-  padding-top: 25px;
-  padding-left: 10px;
-  font-family: "Bebas Neue", cursive;
-  font-size: 20px;
 }
 /*# sourceMappingURL=mutando-a-sass.css.map */

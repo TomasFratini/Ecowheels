@@ -1,0 +1,24 @@
+.container__nosotros{
+    display: grid;
+    grid-template-rows: 100px 950px 100px;
+    grid-template-areas: 
+    "header"
+    "nosotros"
+    "footer";
+}
+
+#nosotros{
+    grid-area: nosotros;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    padding-bottom: 50px;
+    margin-top: 20px;
+    max-width: 900px;
+    font-family: $font-type1;
+    font-size: 25px;
+            .card-img-top{
+                height: 500px;
+            }
+}

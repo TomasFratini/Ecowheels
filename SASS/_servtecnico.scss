@@ -1,0 +1,19 @@
+.container__servtecnico{
+    display: grid;
+    grid-template-rows: 100px 550px 100px;
+    grid-template-areas: 
+    "header"
+    "servtecnico"
+    "footer";
+}
+
+#servtecnico{
+    grid-area:servtecnico;
+    font-family: $font-type1;
+    padding-top: px;
+    justify-self: center;
+    font-size: 25px;
+            .card{
+                border: black solid;
+            }
+}

@@ -5,20 +5,26 @@
     font-size: 100%;
 }
 
-/* Variables */
+@import "variables";
+@import "productos";
+@import "servtecnico";
+@import "nosotros";
+@import "contactos";
+@import "mobile";
 
-$font-type1: 'Bebas Neue', cursive;
-$font-type2: 'Kaushan Script', cursive;
-$degrade: linear-gradient(to left, black, white);
-$border-type: solid black 2px;
-
- /* Indexx */
+@mixin flex-space {
+    display: flex;
+    justify-content: space-around;
+    
+}
+ 
+/* Indexx */
 
 .container__index{
     max-width: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 125px 650px 400px 100px ;
+    grid-template-rows: 125px 650px 500px 100px ;
     grid-template-areas: 
     "header header header"
     "presentacion presentacion presentacion"
@@ -49,13 +55,11 @@ $border-type: solid black 2px;
     background-color: white;
 }
 
- #texto{
+#texto{
     grid-area: texto;
-    display: flex;
-    justify-content: space-around;
+    @include flex-space;
     background-color:white;
-    padding-top: 70px;
-    padding-bottom: 20px;
+    padding-top: 100px;
     background-image: $degrade;
         .presentacion__txt{
             font-size: 25px;
@@ -87,7 +91,7 @@ $border-type: solid black 2px;
             border-radius: 20px;
             border:$border-type;
         }
- }
+    }
  
  /* Redes Sociales Link */
 
@@ -122,20 +126,17 @@ $border-type: solid black 2px;
         } 
 }
 
-.icon-facebook {
-	background: #2E406E;
-}
+$redes:(
+    facebook:#2E406E,
+    twitter:#339DC5,
+    whatsapp: green,
+    instagram: red
+);
 
-.icon-twitter {
-	background: #339DC5;
-}
-
-.icon-whatsapp {
-	background: green;
-}
-
-.icon-instagram {
-	background: red;
+@each $name, $value in $redes {
+    .icon-#{$name} {
+      background: $value;
+    }  
 }
 
 /* Footer */
@@ -158,13 +159,3 @@ $border-type: solid black 2px;
             margin-left: 50%;
         }
 }
-
-/* Pagina Productos */
-
-.migajas{
-    padding-top: 25px;
-    padding-left: 10px;
-    font-family: $font-type1;
-    font-size: 20px;
-}
-

@@ -1,0 +1,66 @@
+.container__contactos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 450px 400px 100px;
+    grid-template-areas: 
+    "header header"
+    "formulario mapa"
+    "canales canales"
+    "footer footer";
+}
+
+#contactanos{
+    grid-area: formulario;
+}
+
+#formulario{
+    grid-area: formulario;
+    font-family: $font-type1;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.mapa{
+    grid-area: mapa;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding-left: 100px;
+    padding-top: 30px;
+}
+
+#canales{
+    grid-area: canales;
+    font-family: $font-type1;
+    background-image: $degrade-2;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 100px;
+    color:black;
+            .canales__titulo{
+                font-size: 40px;
+                padding-bottom: 10px;
+                color: black
+            }
+            .canales__contacto li{
+                list-style: none;
+            }
+            .canales__contacto li a{
+                list-style: none;
+                font-size: 20px;
+                color: white;
+                align-self: center;
+            }
+            .canales__redes li{
+                list-style: none;
+            }
+            .canales__redes li a{
+                list-style: none;
+                font-size: 25px;
+                color: white;
+                align-self: center;
+            }
+}

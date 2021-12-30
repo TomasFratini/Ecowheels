@@ -1,0 +1,37 @@
+.migajas{
+    padding-top: 25px;
+    padding-left: 10px;
+    font-family: $font-type1;
+    font-size: 20px;
+}
+
+.container__productos{
+    display: grid;
+    grid-template-rows: 100px 1100px 100px;
+    grid-template-areas: 
+    "header"
+    "productos"
+    "footer";
+}
+
+#productos{
+    grid-area: productos;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 10px;
+    background-color:white;
+    padding: 10px;
+    padding-bottom: 50px;
+    align-content:space-between;
+    font-family: $font-type1;
+    font-weight: bold;
+            .productos__img{
+                margin: 15px 0;
+                border: $border-type;
+            }
+            .productos__txt{
+                margin-left: 100px;
+                font-size: 20px;
+            }
+}
