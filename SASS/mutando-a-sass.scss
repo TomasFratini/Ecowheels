@@ -24,7 +24,7 @@
     max-width: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 125px 650px 500px 100px ;
+    grid-template-rows: 125px 650px 500px 150px ;
     grid-template-areas: 
     "header header header"
     "presentacion presentacion presentacion"
@@ -44,8 +44,11 @@
     }
     .navbar{
         font-family: $font-type1;
-        color: white;
-        font-size: 24px; 
+        font-size: 24px;
+
+    }
+    .nav-link{
+        color: black;
     }
 }
     
@@ -60,7 +63,7 @@
     @include flex-space;
     background-color:white;
     padding-top: 100px;
-    background-image: $degrade;
+    background-image:$degrade-2;
         .presentacion__txt{
             font-size: 25px;
             font-family: $font-type1;
@@ -144,18 +147,26 @@ $redes:(
 .pie{
     grid-area: footer;
     display: flex;
-    flex-direction: column;
+    justify-content:flex-start;
     background-color: black;
-    height: 140px;
+    height: 150px;
     font-family: $font-type1;
         &__datos{
-            font-size: 18px;
+            display: inline-block;
+            font-size: 17px;
             font-family: $font-type1;
             color: white;
             list-style: none;
         }
         .copy{
+            display: inline-block;
             color: white;
-            margin-left: 50%;
+            padding-top: 10px;
+        }
+        .pie__logo{
+            height: 140px;
+            width: 180px;
+            margin-left: 300px;
+           
         }
 }

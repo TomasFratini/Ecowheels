@@ -40,6 +40,7 @@
     align-items: center;
     padding-top: 100px;
     color:black;
+    text-decoration: none;
             .canales__titulo{
                 font-size: 40px;
                 padding-bottom: 10px;
@@ -53,6 +54,7 @@
                 font-size: 20px;
                 color: white;
                 align-self: center;
+                text-decoration: none;
             }
             .canales__redes li{
                 list-style: none;
@@ -62,5 +64,6 @@
                 font-size: 25px;
                 color: white;
                 align-self: center;
+                text-decoration: none;
             }
 }
