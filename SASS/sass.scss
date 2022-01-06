@@ -289,10 +289,11 @@ $redes:(
     .container__contactos{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 800px 400px 100px;
+        grid-template-rows: 100px 800px 450px 350px 100px;
         grid-template-areas: 
         "header header"
-        "formulario mapa"
+        "formulario formulario"
+        "mapa mapa"
         "canales canales"
         "footer footer";
     }
@@ -312,18 +313,19 @@ $redes:(
         display: flex;
         background-color: white;
         padding-top: 30px;
-        padding-left: 20px;
+        padding-left: 10px;
             .mapa__mapa{
                 height: 300px;
-                width: 250px;
-                padding-left: 20px;
+                width: 400px;
             }
         
     }
 
     #canales{
         grid-area: canales;
-        
+            .canales__titulo{
+                font-size: 30px;
+            }
     }
 
 }
