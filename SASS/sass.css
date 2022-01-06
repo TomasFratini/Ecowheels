@@ -211,8 +211,8 @@
   max-width: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   -ms-grid-rows: 125px 650px 500px 150px;
       grid-template-rows: 125px 650px 500px 150px;
       grid-template-areas: "header header header" "presentacion presentacion presentacion" "texto texto texto" "footer footer footer";
@@ -223,11 +223,9 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: header;
-  background-color: white;
   height: 125px;
   background-image: -webkit-gradient(linear, right top, left top, from(black), to(white));
   background-image: linear-gradient(to left, black, white);
-  z-index: 999;
 }
 
 .header .header__logo {
@@ -379,11 +377,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: black;
-  height: 150px;
+  height: 180px;
   font-family: "Bebas Neue", cursive;
 }
 
@@ -393,17 +391,322 @@
   font-family: "Bebas Neue", cursive;
   color: white;
   list-style: none;
+  padding-top: 10px;
 }
 
 .pie .copy {
   display: inline-block;
   color: white;
-  padding-top: 10px;
+  padding-top: 50px;
+  padding-right: 50px;
 }
 
 .pie .pie__logo {
   height: 140px;
   width: 180px;
-  margin-left: 300px;
 }
-/*# sourceMappingURL=mutando-a-sass.css.map */
+
+/* MediaQuery */
+@media (max-width: 575px) {
+  .container__index {
+    max-width: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 125px 300px 750px 150px;
+        grid-template-rows: 125px 300px 750px 150px;
+        grid-template-areas: "header header header" "presentacion presentacion presentacion" "texto texto texto" "footer footer footer";
+  }
+  .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+    background-color: white;
+    background-image: none;
+  }
+  .navbar-nav {
+    background-color: white;
+    z-index: 999;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .nav-item {
+    color: yellow;
+  }
+  #presentacion {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: presentacion;
+  }
+  #texto {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: texto;
+  }
+  #texto .video {
+    padding-left: 80px;
+  }
+  #texto .presentacion__video {
+    margin: 0%;
+    width: 290px;
+    height: 245px;
+  }
+  .pie {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: footer;
+  }
+  .pie .pie__datos {
+    font-size: 13px;
+  }
+  .pie .pie__logo {
+    height: 100px;
+    width: 120px;
+  }
+  /*Productos */
+  .container__productos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 100px 4000px 100px;
+        grid-template-rows: 100px 4000px 100px;
+        grid-template-areas: "header" "productos" "footer";
+  }
+  #productos {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: productos;
+  }
+  /*Nosotros */
+  .container__nosotros {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 100px 650px 100px;
+        grid-template-rows: 100px 650px 100px;
+        grid-template-areas: "header" "nosotros" "footer";
+  }
+  #nosotros {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: nosotros;
+    font-size: 15px;
+  }
+  #nosotros .card-img-top {
+    height: 300px;
+  }
+  /*Servicio Tecnico */
+  .container__servtecnico {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 100px 800px 100px;
+        grid-template-rows: 100px 800px 100px;
+        grid-template-areas: "header" "servtecnico" "footer";
+  }
+  #servtecnico {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: servtecnico;
+    font-size: 20px;
+    width: 450px;
+  }
+  /* Contactos */
+  .container__contactos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 100px 800px 400px 100px;
+        grid-template-rows: 100px 800px 400px 100px;
+        grid-template-areas: "header header" "formulario mapa" "canales canales" "footer footer";
+  }
+  #contactanos {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: formulario;
+  }
+  #formulario {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: formulario;
+    font-family: "Bebas Neue", cursive;
+    padding-top: 50px;
+  }
+  .mapa {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: mapa;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: white;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .mapa .mapa__mapa {
+    height: 300px;
+    width: 250px;
+    padding-left: 20px;
+  }
+  #canales {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: canales;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .container__index {
+    max-width: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 125px 500px 500px 150px;
+        grid-template-rows: 125px 500px 500px 150px;
+        grid-template-areas: "header header header" "presentacion presentacion presentacion" "texto texto texto" "footer footer footer";
+  }
+  .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+    background-color: white;
+    background-image: none;
+    border-bottom: solid black 2px;
+  }
+  .navbar-nav {
+    background-color: white;
+    z-index: 999;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  #presentacion {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: presentacion;
+  }
+  #texto {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: texto;
+  }
+  #texto .video {
+    padding-left: 80px;
+  }
+  #texto .presentacion__video {
+    margin: 0%;
+    width: 362px;
+    height: 315px;
+  }
+  .pie {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: footer;
+  }
+  .pie .pie__datos {
+    font-size: 17px;
+  }
+  .pie .pie__logo {
+    height: 130px;
+    width: 150px;
+  }
+  /*Productos */
+  .container__productos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 100px 1700px 100px;
+        grid-template-rows: 100px 1700px 100px;
+        grid-template-areas: "header" "productos" "footer";
+  }
+  #productos {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: productos;
+  }
+  /*Nosotros */
+  .container__nosotros {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 100px 800px 100px;
+        grid-template-rows: 100px 800px 100px;
+        grid-template-areas: "header" "nosotros" "footer";
+  }
+  #nosotros {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: nosotros;
+    font-size: 20px;
+  }
+  #nosotros .card-img-top {
+    height: 500px;
+  }
+  /*Servicio Tecnico */
+  .container__servtecnico {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 100px 500px 100px;
+        grid-template-rows: 100px 500px 100px;
+        grid-template-areas: "header" "servtecnico" "footer";
+  }
+  #servtecnico {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: servtecnico;
+    font-size: 20px;
+    width: 850px;
+    padding-top: 50px;
+  }
+  /* Contactos */
+  .container__contactos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 100px 500px 400px 100px;
+        grid-template-rows: 100px 500px 400px 100px;
+        grid-template-areas: "header header" "formulario mapa" "canales canales" "footer footer";
+  }
+  #contactanos {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: formulario;
+  }
+  #formulario {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: formulario;
+    font-family: "Bebas Neue", cursive;
+    padding-top: 50px;
+  }
+  .mapa {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: mapa;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: white;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .mapa .mapa__mapa {
+    height: 300px;
+    width: 400px;
+    padding-left: 20px;
+  }
+  #canales {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: canales;
+  }
+}
+/*# sourceMappingURL=sass.css.map */

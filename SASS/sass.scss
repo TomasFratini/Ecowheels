@@ -1,0 +1,490 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+@import "variables";
+@import "productos";
+@import "servtecnico";
+@import "nosotros";
+@import "contactos";
+@import "mobile";
+
+@mixin flex-space {
+    display: flex;
+    justify-content: space-around;
+    
+}
+ 
+/* Indexx */
+
+.container__index{
+    max-width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 125px 650px 500px 150px ;
+    grid-template-areas: 
+    "header header header"
+    "presentacion presentacion presentacion"
+    "texto texto texto"
+    "footer footer footer";
+}
+.header{
+    grid-area: header;
+    height: 125px;
+    background-image: $degrade;
+    .header__logo{
+        height: 100px;
+        width: 120px;
+        border-end-end-radius: 40px;
+    }
+    .navbar{
+        font-family: $font-type1;
+        font-size: 24px;
+
+    }
+    .nav-link{
+        color: black;
+    }
+
+}
+    
+#presentacion{
+    grid-area: presentacion;
+    padding-top: 10px;
+    background-color: white;
+}
+
+#texto{
+    grid-area: texto;
+    @include flex-space;
+    background-color:white;
+    padding-top: 100px;
+    background-image:$degrade-2;
+        .presentacion__txt{
+            font-size: 25px;
+            font-family: $font-type1;
+            list-style: none;
+            padding-left: 50px;
+        }
+        .presentacion__txt2{
+            font-size: 25px;
+            font-family: $font-type1;
+            margin-left: 5px;
+            align-self: center;
+            padding-top: 10px;
+            padding-left: 150px;
+        }
+        .presentacion__txt3{
+            font-size: 30px;
+            font-family: $font-type2;
+            padding-top: 70px;
+            color: white;
+            padding-left: 50px;
+        }
+        .presentacion__video{
+            margin-right: 100px;
+            height: 350px;
+            width: 500px;
+            align-self:center;
+            margin-bottom: 50px;
+            border-radius: 20px;
+            border:$border-type;
+        }
+    }
+ 
+ /* Redes Sociales Link */
+
+
+.social__bar{
+    position: fixed;
+	right: 0;
+	top: 35%;
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 100;
+        .icon {
+            color: white;
+            text-decoration: none;
+            padding: .7rem;
+            display: flex;
+            transition: all .5s;
+            &:hover{
+                padding-right: 3rem;
+                border-radius: 1rem 0 0 1rem;
+                box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+                color: black; 
+            }
+            &:last-child{
+                border-radius: 0 0 0 1rem;
+            }
+            &:first-child{
+                border-radius: 1rem 0 0 0;
+            }
+        } 
+}
+
+$redes:(
+    facebook:#2E406E,
+    twitter:#339DC5,
+    whatsapp: green,
+    instagram: red
+);
+
+@each $name, $value in $redes {
+    .icon-#{$name} {
+      background: $value;
+    }  
+}
+
+/* Footer */
+
+.pie{
+    grid-area: footer;
+    display: flex;
+    justify-content:space-between;
+    background-color: black;
+    height: 180px;
+    font-family: $font-type1;
+        &__datos{
+            display: inline-block;
+            font-size: 17px;
+            font-family: $font-type1;
+            color: white;
+            list-style: none;
+            padding-top: 10px;
+        }
+        .copy{
+            display: inline-block;
+            color: white;
+            padding-top: 50px;
+            padding-right: 50px;
+        }
+        .pie__logo{
+            height: 140px;
+            width: 180px;
+        }
+}
+
+/* MediaQuery */
+
+@media (max-width: 575px) {
+
+    .container__index{
+        max-width: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 125px 300px 750px 150px ;
+        grid-template-areas: 
+        "header header header"
+        "presentacion presentacion presentacion"
+        "texto texto texto"
+        "footer footer footer";
+    }
+    
+    .header{
+        grid-area: header;
+        background-color: white;
+        background-image: none;
+        
+    }
+
+    .navbar-nav{
+        background-color: white ;
+        z-index: 999;
+        position: sticky;
+    }
+    
+    .nav-item{
+        color: yellow;
+    }
+
+    #presentacion{
+        grid-area: presentacion;
+       
+    }
+
+    #texto{
+        grid-area: texto;
+            .video{
+                padding-left: 80px;
+            }
+            .presentacion__video{
+                margin: 0%;
+                width: 290px;
+                height: 245px;
+                
+            }
+    }
+
+
+    .pie{
+        grid-area: footer;
+            .pie__datos{
+                font-size: 13px;
+            }
+            .pie__logo{
+                height: 100px;
+                width: 120px;
+            }
+    }
+
+
+    /*Productos */ 
+
+    .container__productos{
+        display: grid;
+        grid-template-rows: 100px 4000px 100px;
+        grid-template-areas: 
+        "header"
+        "productos"
+        "footer";
+    }
+    #productos{
+        grid-area: productos;
+    }
+
+    /*Nosotros */ 
+
+    .container__nosotros{
+        display: grid;
+        grid-template-rows: 100px 650px 100px;
+        grid-template-areas: 
+        "header"
+        "nosotros"
+        "footer";
+    }
+    #nosotros{
+        grid-area: nosotros;
+        font-size: 15px;
+            .card-img-top{
+                height: 300px;
+            }
+    }
+
+    /*Servicio Tecnico */
+
+    .container__servtecnico{
+        display: grid;
+        grid-template-rows: 100px 800px 100px;
+        grid-template-areas: 
+        "header"
+        "servtecnico"
+        "footer";
+    }
+
+    #servtecnico{
+        grid-area: servtecnico;
+        font-size: 20px;
+        width: 450px;
+        
+    }
+
+    /* Contactos */ 
+
+    .container__contactos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 800px 400px 100px;
+        grid-template-areas: 
+        "header header"
+        "formulario mapa"
+        "canales canales"
+        "footer footer";
+    }
+
+    #contactanos{
+        grid-area: formulario;
+    }
+
+    #formulario{
+        grid-area: formulario;
+        font-family: $font-type1;
+        padding-top: 50px;
+    }
+
+    .mapa{
+        grid-area: mapa;
+        display: flex;
+        background-color: white;
+        padding-top: 30px;
+        padding-left: 20px;
+            .mapa__mapa{
+                height: 300px;
+                width: 250px;
+                padding-left: 20px;
+            }
+        
+    }
+
+    #canales{
+        grid-area: canales;
+        
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .container__index{
+        max-width: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 125px 500px 500px 150px ;
+        grid-template-areas: 
+        "header header header"
+        "presentacion presentacion presentacion"
+        "texto texto texto"
+        "footer footer footer";
+    }
+    
+    .header{
+        grid-area: header;
+        background-color: white;
+        background-image: none;
+        border-bottom: solid black 2px;
+        
+    }
+
+    .navbar-nav{
+        background-color: white ;
+        z-index: 999;
+        position: sticky;
+    }
+
+    #presentacion{
+        grid-area: presentacion;
+       
+    }
+
+    #texto{
+        grid-area: texto;
+            .video{
+                padding-left: 80px;
+            }
+            .presentacion__video{
+                margin: 0%;
+                width: 362px;
+                height: 315px;
+                
+            }
+    }
+
+
+    .pie{
+        grid-area: footer;
+            .pie__datos{
+                font-size: 17px;
+            }
+            .pie__logo{
+                height: 130px;
+                width: 150px;
+            }
+    }
+
+
+    /*Productos */ 
+
+    .container__productos{
+        display: grid;
+        grid-template-rows: 100px 1700px 100px;
+        grid-template-areas: 
+        "header"
+        "productos"
+        "footer";
+    }
+    #productos{
+        grid-area: productos;
+    }
+
+    /*Nosotros */ 
+
+    .container__nosotros{
+        display: grid;
+        grid-template-rows: 100px 800px 100px;
+        grid-template-areas: 
+        "header"
+        "nosotros"
+        "footer";
+    }
+    #nosotros{
+        grid-area: nosotros;
+        font-size: 20px;
+            .card-img-top{
+                height: 500px;
+            }
+    }
+
+    /*Servicio Tecnico */
+
+    .container__servtecnico{
+        display: grid;
+        grid-template-rows: 100px 500px 100px;
+        grid-template-areas: 
+        "header"
+        "servtecnico"
+        "footer";
+    }
+
+    #servtecnico{
+        grid-area: servtecnico;
+        font-size: 20px;
+        width: 850px;
+        padding-top: 50px;
+        
+        
+    }
+
+    /* Contactos */ 
+
+    .container__contactos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 500px 400px 100px;
+        grid-template-areas: 
+        "header header"
+        "formulario mapa"
+        "canales canales"
+        "footer footer";
+        
+    }
+
+    #contactanos{
+        grid-area: formulario;
+    
+    }
+
+    #formulario{
+        grid-area: formulario;
+        font-family: $font-type1;
+        padding-top: 50px;
+    }
+
+    .mapa{
+        grid-area: mapa;
+        display: flex;
+        background-color: white;
+        padding-top: 30px;
+        padding-left: 20px;
+            .mapa__mapa{
+                height: 300px;
+                width: 400px;
+                padding-left: 20px;
+            }
+        
+    }
+
+    #canales{
+        grid-area: canales;
+        
+    }
+
+
+}
+
+   
+    
