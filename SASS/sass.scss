@@ -10,7 +10,6 @@
 @import "servtecnico";
 @import "nosotros";
 @import "contactos";
-@import "mobile";
 
 @mixin flex-space {
     display: flex;
@@ -167,12 +166,25 @@ $redes:(
         .pie__logo{
             height: 140px;
             width: 180px;
+            
+            
+        }
+        .social{
+            font-size: 25px;
+            padding-right: 10px;
+            color: white;
+            padding-top: 50px;
+        }
+        .icon{
+            color: white;
+            text-decoration: none;
+            background-color: black;
         }
 }
 
 /* MediaQuery */
 
-@media (max-width: 575px) {
+@media (max-width: 592px) {
 
     .container__index{
         max-width: auto;
@@ -226,10 +238,15 @@ $redes:(
         grid-area: footer;
             .pie__datos{
                 font-size: 13px;
+                padding-left: 10px;
             }
             .pie__logo{
                 height: 100px;
                 width: 120px;
+                display: none;
+            }
+            .icon{
+                font-size: 16px;
             }
     }
 
@@ -238,7 +255,7 @@ $redes:(
 
     .container__productos{
         display: grid;
-        grid-template-rows: 100px 4000px 100px;
+        grid-template-rows: 100px 4100px 100px;
         grid-template-areas: 
         "header"
         "productos"
@@ -370,8 +387,8 @@ $redes:(
             }
             .presentacion__video{
                 margin: 0%;
-                width: 362px;
-                height: 315px;
+                width: 290px;
+                height: 280px;
                 
             }
     }
@@ -393,7 +410,7 @@ $redes:(
 
     .container__productos{
         display: grid;
-        grid-template-rows: 100px 1700px 100px;
+        grid-template-rows: 100px 2300px 100px;
         grid-template-areas: 
         "header"
         "productos"
@@ -487,6 +504,32 @@ $redes:(
 
 
 }
+
+@media (min-width: 992px) and (max-width: 1187px) {
+
+    .header{
+        grid-area: header;
+    }
+
+    .container__productos{
+        display: grid;
+        grid-template-rows: 100px 1900px 100px;
+        grid-template-areas: 
+        "header"
+        "productos"
+        "footer";
+    }
+    #productos{
+        grid-area: productos;
+    }
+
+    .pie{
+        grid-area: footer;
+    }
+
+}
+
+
 
    
     

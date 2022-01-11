@@ -1,7 +1,7 @@
 .container__contactos{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 450px 400px 100px;
+    grid-template-rows: 100px 450px 500px 100px;
     grid-template-areas: 
     "header header"
     "formulario mapa"
@@ -26,7 +26,7 @@
     align-items: center;
     background-color: white;
     padding-left: 100px;
-    padding-top: 30px;
+    margin-top: 30px;
 }
 
 #canales{
