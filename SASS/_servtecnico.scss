@@ -1,9 +1,10 @@
 .container__servtecnico{
     display: grid;
-    grid-template-rows: 100px 550px 100px;
+    grid-template-rows: 100px 550px 770px 100px;
     grid-template-areas: 
     "header"
     "servtecnico"
+    "proved"
     "footer";
 }
 
@@ -13,7 +14,13 @@
     padding-top: px;
     justify-self: center;
     font-size: 25px;
+    box-shadow: $sombras;
+    padding: 0;
             .card{
                 border: black solid;
             }
+}
+
+.proved{
+    grid-area: proved;
 }

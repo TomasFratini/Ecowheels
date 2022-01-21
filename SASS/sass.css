@@ -65,9 +65,9 @@
 .container__servtecnico {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100px 550px 100px;
-      grid-template-rows: 100px 550px 100px;
-      grid-template-areas: "header" "servtecnico" "footer";
+  -ms-grid-rows: 100px 550px 770px 100px;
+      grid-template-rows: 100px 550px 770px 100px;
+      grid-template-areas: "header" "servtecnico" "proved" "footer";
 }
 
 #servtecnico {
@@ -79,18 +79,27 @@
   -ms-grid-column-align: center;
       justify-self: center;
   font-size: 25px;
+  -webkit-box-shadow: 0 15px 20px;
+          box-shadow: 0 15px 20px;
+  padding: 0;
 }
 
 #servtecnico .card {
   border: black solid;
 }
 
+.proved {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: proved;
+}
+
 .container__nosotros {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100px 950px 100px;
-      grid-template-rows: 100px 950px 100px;
-      grid-template-areas: "header" "nosotros" "footer";
+  -ms-grid-rows: 100px 950px 50px 600px 100px;
+      grid-template-rows: 100px 950px 50px 600px 100px;
+      grid-template-areas: "header" "nosotros" "titulo" "noticia " "footer";
 }
 
 #nosotros {
@@ -105,22 +114,40 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 50px;
   margin-top: 20px;
   max-width: 900px;
   font-family: "Bebas Neue", cursive;
   font-size: 25px;
+  -webkit-box-shadow: 0 15px 20px;
+          box-shadow: 0 15px 20px;
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-bottom: 30px;
 }
 
 #nosotros .card-img-top {
   height: 500px;
 }
 
+.titulo__noticias {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: titulo;
+}
+
+.card-group {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: noticia;
+}
+
 .container__contactos {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   -ms-grid-rows: 100px 450px 500px 100px;
       grid-template-rows: 100px 450px 500px 100px;
       grid-template-areas: "header header" "formulario mapa" "canales canales" "footer footer";
@@ -152,8 +179,13 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
-  padding-left: 100px;
-  margin-top: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  height: 400px;
+  width: 500px;
+  padding-right: 100px;
 }
 
 #canales {
@@ -224,9 +256,9 @@
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 125px 650px 500px 150px;
-      grid-template-rows: 125px 650px 500px 150px;
-      grid-template-areas: "header header header" "presentacion presentacion presentacion" "texto texto texto" "footer footer footer";
+  -ms-grid-rows: 125px 750px 400px 50px 600px 150px;
+      grid-template-rows: 125px 750px 400px 50px 600px 150px;
+      grid-template-areas: "header header header" "presentacion presentacion presentacion" "texto texto texto" "titulo titulo titulo" "noticia noticia noticia" "footer footer footer";
 }
 
 .header {
@@ -263,6 +295,29 @@
   background-color: white;
 }
 
+.titulo__noticias {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: titulo;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  border-top: black solid 1px;
+  background-color: gray;
+}
+
+.card-group {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: noticia;
+  font-family: "Bebas Neue", cursive;
+}
+
+.card-group .card-title {
+  font-size: 25px;
+}
+
 #texto {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -274,9 +329,7 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: white;
-  padding-top: 100px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(black), to(white));
-  background-image: linear-gradient(to top, black, white);
+  padding-top: 400px;
 }
 
 #texto .presentacion__txt {
@@ -301,7 +354,7 @@
   font-size: 30px;
   font-family: "Kaushan Script", cursive;
   padding-top: 70px;
-  color: white;
+  color: #610D00;
   padding-left: 50px;
 }
 
@@ -315,6 +368,8 @@
   margin-bottom: 50px;
   border-radius: 20px;
   border: solid black 2px;
+  -webkit-box-shadow: 0 15px 20px;
+          box-shadow: 0 15px 20px;
 }
 
 /* Redes Sociales Link */
@@ -381,7 +436,7 @@
 
 /* Footer */
 .pie {
-  -ms-grid-row: 4;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: footer;
@@ -438,9 +493,9 @@
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 125px 300px 750px 150px;
-        grid-template-rows: 125px 300px 750px 150px;
-        grid-template-areas: "header header header" "presentacion presentacion presentacion" "texto texto texto" "footer footer footer";
+    -ms-grid-rows: 125px 300px 750px 50px 1600px 150px;
+        grid-template-rows: 125px 300px 750px 50px 1600px 150px;
+        grid-template-areas: "header header header" "presentacion presentacion presentacion" "texto texto texto" "titulo titulo titulo" "noticia noticia noticia" "footer footer footer";
   }
   .header {
     -ms-grid-row: 1;
@@ -449,6 +504,7 @@
     grid-area: header;
     background-color: white;
     background-image: none;
+    border-bottom: solid black 2px;
   }
   .navbar-nav {
     background-color: white;
@@ -464,6 +520,16 @@
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: presentacion;
+  }
+  .titulo__noticias {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: titulo;
+  }
+  .card-group {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: noticia;
   }
   #texto {
     -ms-grid-row: 3;
@@ -514,9 +580,9 @@
   .container__nosotros {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 100px 650px 100px;
-        grid-template-rows: 100px 650px 100px;
-        grid-template-areas: "header" "nosotros" "footer";
+    -ms-grid-rows: 100px 650px 50px 1600px 100px;
+        grid-template-rows: 100px 650px 50px 1600px 100px;
+        grid-template-areas: "header" "nosotros" "titulo" "noticia" "footer";
   }
   #nosotros {
     -ms-grid-row: 2;
@@ -531,23 +597,28 @@
   .container__servtecnico {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 100px 800px 100px;
-        grid-template-rows: 100px 800px 100px;
-        grid-template-areas: "header" "servtecnico" "footer";
+    -ms-grid-rows: 100px 800px 2000px 100px;
+        grid-template-rows: 100px 800px 2000px 100px;
+        grid-template-areas: "header" "servtecnico" "proved" "footer";
   }
   #servtecnico {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: servtecnico;
     font-size: 20px;
-    width: 450px;
+    width: 200px;
+  }
+  .proved {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: proved;
   }
   /* Contactos */
   .container__contactos {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     -ms-grid-rows: 100px 800px 450px 350px 100px;
         grid-template-rows: 100px 800px 450px 350px 100px;
         grid-template-areas: "header header" "formulario formulario" "mapa mapa" "canales canales" "footer footer";
@@ -576,10 +647,10 @@
     display: flex;
     background-color: white;
     padding-top: 30px;
-    padding-left: 10px;
+    padding-left: 90px;
   }
   .mapa .mapa__mapa {
-    height: 300px;
+    height: 400px;
     width: 400px;
   }
   #canales {
@@ -600,9 +671,9 @@
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 125px 500px 500px 150px;
-        grid-template-rows: 125px 500px 500px 150px;
-        grid-template-areas: "header header header" "presentacion presentacion presentacion" "texto texto texto" "footer footer footer";
+    -ms-grid-rows: 125px 500px 500px 50px 800px 150px;
+        grid-template-rows: 125px 500px 500px 50px 800px 150px;
+        grid-template-areas: "header header header" "presentacion presentacion presentacion" "texto texto texto" "titulo titulo titulo" "noticia noticia noticia" "footer footer footer";
   }
   .header {
     -ms-grid-row: 1;
@@ -624,6 +695,16 @@
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: presentacion;
+  }
+  .titulo__noticias {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: titulo;
+  }
+  .card-group {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: noticia;
   }
   #texto {
     -ms-grid-row: 3;
@@ -669,9 +750,9 @@
   .container__nosotros {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 100px 800px 100px;
-        grid-template-rows: 100px 800px 100px;
-        grid-template-areas: "header" "nosotros" "footer";
+    -ms-grid-rows: 100px 800px 50px 800px 100px;
+        grid-template-rows: 100px 800px 50px 800px 100px;
+        grid-template-areas: "header" "nosotros" "titulo" "noticia" "footer";
   }
   #nosotros {
     -ms-grid-row: 2;
@@ -686,9 +767,9 @@
   .container__servtecnico {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 100px 500px 100px;
-        grid-template-rows: 100px 500px 100px;
-        grid-template-areas: "header" "servtecnico" "footer";
+    -ms-grid-rows: 100px 500px 400px 100px;
+        grid-template-rows: 100px 500px 400px 100px;
+        grid-template-areas: "header" "servtecnico" "proved" "footer";
   }
   #servtecnico {
     -ms-grid-row: 2;
@@ -698,12 +779,17 @@
     width: 850px;
     padding-top: 50px;
   }
+  .proved {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: proved;
+  }
   /* Contactos */
   .container__contactos {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     -ms-grid-rows: 100px 500px 400px 100px;
         grid-template-rows: 100px 500px 400px 100px;
         grid-template-areas: "header header" "formulario mapa" "canales canales" "footer footer";
@@ -729,12 +815,11 @@
     display: flex;
     background-color: white;
     padding-top: 30px;
-    padding-left: 20px;
+    padding-left: 80px;
   }
   .mapa .mapa__mapa {
     height: 300px;
     width: 400px;
-    padding-left: 20px;
   }
   #canales {
     -ms-grid-row: 3;

@@ -1,9 +1,11 @@
 .container__nosotros{
     display: grid;
-    grid-template-rows: 100px 950px 100px;
+    grid-template-rows: 100px 950px 50px 600px 100px;
     grid-template-areas: 
     "header"
     "nosotros"
+    "titulo"
+    "noticia "
     "footer";
 }
 
@@ -13,12 +15,23 @@
     align-items: center;
     background-color: white;
     justify-content: center;
-    padding-bottom: 50px;
     margin-top: 20px;
     max-width: 900px;
     font-family: $font-type1;
     font-size: 25px;
+    box-shadow: $sombras;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 30px;
             .card-img-top{
                 height: 500px;
             }
+}
+
+.titulo__noticias{
+    grid-area: titulo;
+}
+
+.card-group{
+    grid-area: noticia;
 }
