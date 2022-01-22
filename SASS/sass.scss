@@ -224,7 +224,9 @@ $redes:(
         background-color: white;
         background-image: none;
         border-bottom: solid black 2px;
-        
+            .navbar-collapse{
+                z-index: 999;
+            }
     }
 
     .navbar-nav{
@@ -331,7 +333,7 @@ $redes:(
     #servtecnico{
         grid-area: servtecnico;
         font-size: 20px;
-        width: 200px;  
+        width: 300px;  
     }
 
     .proved{
@@ -405,6 +407,9 @@ $redes:(
         background-color: white;
         background-image: none;
         border-bottom: solid black 2px;
+            .navbar-collapse{
+                z-index: 999;
+            }
         
     }
 
@@ -491,7 +496,7 @@ $redes:(
 
     .container__servtecnico{
         display: grid;
-        grid-template-rows: 100px 500px 400px 100px;
+        grid-template-rows: 100px 400px 400px 100px;
         grid-template-areas: 
         "header"
         "servtecnico"
@@ -503,7 +508,7 @@ $redes:(
         grid-area: servtecnico;
         font-size: 20px;
         width: 850px;
-        padding-top: 50px;
+        
         
         
     }
